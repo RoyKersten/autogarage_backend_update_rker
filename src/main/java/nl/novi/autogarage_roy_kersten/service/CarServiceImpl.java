@@ -77,6 +77,7 @@ public class CarServiceImpl implements CarService{
         storedCar.setModel(updateCar.getModel());
         storedCar.setYearOfConstruction(updateCar.getYearOfConstruction());
         storedCar.setLicensePlateNumber(updateCar.getLicensePlateNumber());
+        storedCar.setExperiationDateInspection(updateCar.getExperiationDateInspection());
         storedCar.setCustomer(updateCar.getCustomer());
         carRepository.save(updateCar);
     }

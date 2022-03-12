@@ -14,6 +14,7 @@ import java.util.Map;
  * The UserController class ensures that HTTP Requests en Responses are handled and processed further to the UserService interface.
  **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/users")
 public class UserController {

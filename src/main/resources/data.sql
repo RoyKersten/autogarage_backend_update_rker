@@ -21,13 +21,13 @@ VALUES
 ('Karel', 'Viends', '+31685746114', 'karel.vriends@ziggo.nl');
 
 
-INSERT INTO car (brand, model,year_of_construction, license_plate_number, customer_id_customer)
+INSERT INTO car (brand, model,year_of_construction, license_plate_number, customer_id_customer, experiation_date_inspection)
 VALUES
-('Volkswagen', 'Polo', '2021', '55-AWA-23','1'),
-('Seat', 'Ibiza', '2018', '26-DEV-38','2'),
-('Renault', 'Megan', '2019', '41-EGA,22', '3'),
-('Opel', 'Zafira', '2016', '66-PGA-74', '4'),
-('Ford', 'Mustang', '1976', 'WZ-HH-65', '5');
+('Volkswagen', 'Polo', '2021', '55-AWA-23','1', 20220521),
+('Seat', 'Ibiza', '2018', '26-DEV-38','2', 20220305),
+('Renault', 'Megan', '2019', '41-EGA-22', '3', 20220803),
+('Opel', 'Zafira', '2016', '66-PGA-74', '4', 20221018),
+('Ford', 'Mustang', '1976', 'WZ-HH-65', '5', 20221207);
 
 
 INSERT INTO item (item_type, item_name, qty, price, brand, item_category, status)

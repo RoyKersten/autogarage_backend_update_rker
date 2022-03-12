@@ -18,6 +18,7 @@ import java.net.URI;
  * The CarController class ensures that HTTP Requests en Responses are handled and processed further to the CarService interface.
  **/
 
+@CrossOrigin // no addition means no restriction, adding => (origins = "http://localhost:1234") means only this origin has access
 @RestController
 @RequestMapping(value = "/cars")
 public class CarController {
@@ -83,7 +84,6 @@ public class CarController {
         return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"carpaper.pdf\"")
                 .body(licenseBytes);
     }
-
 
 
 }

@@ -35,7 +35,7 @@ class CarServiceTest {
     @Test
     void addCarTest() {
         //Arrange => create car as input for test
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         when(carRepository.save(car)).thenReturn(car);
 
         //Act => call method addCar
@@ -55,9 +55,9 @@ class CarServiceTest {
     @Test
     void getAllCars() {
         //Arrange => create 3 cars as input for the test
-        Car car1 = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
-        Car car2 = new Car(2L, "Renault", "megan", "2014", "33-13-FG");
-        Car car3 = new Car(3L, "Ford", "mustang", "2021", "12-ABA-41");
+        Car car1 = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
+        Car car2 = new Car(2L, "Renault", "megan", "2014", "33-13-FG", 1L);
+        Car car3 = new Car(3L, "Ford", "mustang", "2021", "12-ABA-41", 1L);
 
         List<Car> cars = new ArrayList<>();
         cars.add(car1);
@@ -79,7 +79,7 @@ class CarServiceTest {
     @Test
     void getCarByIdTest() {
         //Arrange => create car object as input for test
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         when(carRepository.existsById(1L)).thenReturn(true);
         when(carRepository.findById(1L)).thenReturn(car);
 
@@ -110,8 +110,8 @@ class CarServiceTest {
     void updateCarById() {
 
         //Arrange => create updateCar and storedCar object as input for test
-        Car updateCar = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
-        Car storedCar = new Car(1L, "Renault", "megan", "2014", "33-13-FG");
+        Car updateCar = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
+        Car storedCar = new Car(1L, "Renault", "megan", "2014", "33-13-FG", 1L);
 
         when(carRepository.existsById(1L)).thenReturn(true);
         when(carRepository.findById(1L)).thenReturn(storedCar);
@@ -129,7 +129,7 @@ class CarServiceTest {
     @Test
     void uploadCarPaperTest() throws IOException {
         //Arrange => create a car object for test
-        var optionalCarPaper = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        var optionalCarPaper = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         Long idCarPaper = 1L;
         when(carRepository.findById(idCarPaper)).thenReturn(Optional.of(optionalCarPaper));                             //create mock object when carRepository.findById is called
 
@@ -156,7 +156,7 @@ class CarServiceTest {
     @Test
     void getCarPaperTest() throws IOException {
         //Arrange => create a car object for test
-        var optionalCarPaper = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        var optionalCarPaper = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         Long idCarPaper = 1L;
         when(carRepository.findById(idCarPaper)).thenReturn(Optional.of(optionalCarPaper));                             //create mock object when carRepository.findById is called
 

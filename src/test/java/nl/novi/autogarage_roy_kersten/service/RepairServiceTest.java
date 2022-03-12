@@ -42,7 +42,7 @@ public class RepairServiceTest {
     void addServiceTest() {
         //Arrange => create Repair as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Repair storedRepair = new Repair(1L, date, ServiceStatus.UITVOEREN, customer, "uitlaat vervangen", null, car);
 
@@ -68,7 +68,7 @@ public class RepairServiceTest {
     void getServiceByIdTest() {
         //Arrange => create repair object as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Repair repair = new Repair(1L, date, ServiceStatus.UITVOEREN, customer, "uitlaat vervangen", null, car);
 
@@ -106,7 +106,7 @@ public class RepairServiceTest {
     void updateServiceStatusByIdTest() {
         //Arrange => create repair object as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Repair storedRepair = new Repair(1L, date, ServiceStatus.UITVOEREN, customer, "uitlaat vervangen", null, car);
         when(serviceRepository.existsById(1L)).thenReturn(true);
@@ -129,7 +129,7 @@ public class RepairServiceTest {
     void getAllRepairsTest() {
         //Arrange => create 3 repairs as input for the test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Repair repair1 = new Repair(1L, date, ServiceStatus.UITVOEREN, customer, "uitlaat vervangen", null, car);
         Repair repair2 = new Repair(2L, date, ServiceStatus.NIET_UITVOEREN, customer, "remmen vervangen", null, car);
@@ -159,7 +159,7 @@ public class RepairServiceTest {
     void getRepairByStatusTest() {
         //Arrange => create objects as input for test (test should return all repairs with status "VOLTOOID")
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Repair repair1 = new Repair(1L, date, ServiceStatus.VOLTOOID, customer, "uitlaat vervangen", null, car);
         Repair repair2 = new Repair(2L, date, ServiceStatus.UITVOEREN, customer, "remmen vervangen", null, car);
@@ -183,7 +183,7 @@ public class RepairServiceTest {
     void updateRepairByIdTest() {
         //Arrange => create updateRepair and storedRepair object as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Repair updateRepair = new Repair(1L, date, ServiceStatus.VOLTOOID, customer, "uitlaat vervangen", null, car);
         Repair storedRepair = new Repair(1L, date, ServiceStatus.UITVOEREN, customer, "remmen vervangen", null, car);

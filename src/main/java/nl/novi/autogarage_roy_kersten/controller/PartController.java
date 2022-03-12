@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * The PartController class ensures that HTTP Requests en Responses are handled and processed further to the PartService interface.
 **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/items/parts")
 public class PartController extends ItemController {

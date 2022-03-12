@@ -17,6 +17,7 @@ import java.util.List;
  * The InspectionController class ensures that HTTP Requests en Responses are handled and processed further to the InspectionService interface.
  **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/services/inspections")
 public class InspectionController extends ServiceController {

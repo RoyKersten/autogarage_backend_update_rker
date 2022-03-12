@@ -16,6 +16,7 @@ import java.util.List;
  * The RepairController class ensures that HTTP Requests en Responses are handled and processed further to the RepairService interface.
  **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/services/repairs")
 public class RepairController extends ServiceController {

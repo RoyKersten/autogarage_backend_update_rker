@@ -13,6 +13,7 @@ import java.net.URI;
  * The CustomerController class ensures that HTTP Requests en Responses are handled and processed further to the CustomerService interface.
 **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/customers")
 public class CustomerController {

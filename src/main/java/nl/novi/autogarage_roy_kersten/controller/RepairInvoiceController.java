@@ -5,6 +5,7 @@ import nl.novi.autogarage_roy_kersten.service.RepairInvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * The RepairInvoiceController class ensures that HTTP Requests en Responses are handled and processed further to the RepairInvoiceService interface.
  **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/invoices/repairs")
 public class RepairInvoiceController extends InvoiceController {

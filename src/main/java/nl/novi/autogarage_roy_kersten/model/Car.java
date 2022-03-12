@@ -1,6 +1,8 @@
 package nl.novi.autogarage_roy_kersten.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.catalina.security.DeployXmlPermission;
 
 import javax.persistence.*;
 import java.util.List;
@@ -31,6 +33,10 @@ public class Car {
     @Column(name = "license_plate_number")
     private String licensePlateNumber;
 
+    @Column(name = "experiation_date_inspection")
+//    @JsonProperty("vervaldatum_apk")                 /**Added**/
+    private Long experiationDateInspection;
+
     @OneToMany (mappedBy = "car")
     @JsonIgnore
     private List<Service> service;
@@ -44,12 +50,14 @@ public class Car {
     //Constructors
     public Car() {}
 
-    public Car(Long idCar, String brand, String model, String yearOfConstruction, String licensePlateNumber) {
+    public Car(Long idCar, String brand, String model, String yearOfConstruction, String licensePlateNumber, Long experiationDateInspection) {
         this.idCar = idCar;
         this.brand = brand;
         this.model = model;
         this.yearOfConstruction = yearOfConstruction;
         this.licensePlateNumber = licensePlateNumber;
+        this.experiationDateInspection = experiationDateInspection;
+
     }
 
 
@@ -118,5 +126,12 @@ public class Car {
         this.carPaper = carPaper;
     }
 
+    public Long getExperiationDateInspection() {
+        return experiationDateInspection;
+    }
+
+    public void setExperiationDateInspection(Long experiationDateInspection) {
+        this.experiationDateInspection = experiationDateInspection;
+    }
 }
 

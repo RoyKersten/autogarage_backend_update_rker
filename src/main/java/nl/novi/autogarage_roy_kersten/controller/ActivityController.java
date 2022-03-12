@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * The ActivityController class ensures that HTTP Requests en Responses are handled and processed further to the ActivityService interface.
 **/
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/items/activities")
 public class ActivityController extends ItemController {

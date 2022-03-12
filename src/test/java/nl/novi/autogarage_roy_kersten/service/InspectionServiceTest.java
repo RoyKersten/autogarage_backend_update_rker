@@ -42,7 +42,7 @@ public class InspectionServiceTest {
     void addServiceTest() {
         //Arrange => create Repair as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Inspection storedInspection = new Inspection (1L, date , ServiceStatus.UITVOEREN ,customer,"banden profiel te laag < 2mm, remmen achter vervangen", null, car);
 
@@ -68,7 +68,7 @@ public class InspectionServiceTest {
     void getServiceByIdTest() {
         //Arrange => create repair object as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Inspection inspection = new Inspection (1L, date , ServiceStatus.UITVOEREN ,customer,"banden profiel te laag < 2mm, remmen achter vervangen", null, car);
 
@@ -105,7 +105,7 @@ public class InspectionServiceTest {
     void updateServiceStatusByIdTest() {
         //Arrange => create repair object as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Inspection storedInspection = new Inspection(1L, date, ServiceStatus.UITVOEREN, customer, "banden profiel te laag < 2mm, remmen achter vervangen", null, car);
         when(serviceRepository.existsById(1L)).thenReturn(true);
@@ -127,7 +127,7 @@ public class InspectionServiceTest {
     void getAllInspectionsTest() {
         //Arrange => create 3 repairs as input for the test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Inspection inspection1 = new Inspection(1L, date, ServiceStatus.VOLTOOID, customer, "uitlaat vervangen", null, car);
         Inspection inspection2 = new Inspection(2L, date, ServiceStatus.NIET_UITVOEREN, customer, "remmen vervangen", null, car);
@@ -157,7 +157,7 @@ public class InspectionServiceTest {
     void getInspectionByStatusTest() {
         //Arrange => create objects as input for test (test should return all repairs with status "VOLTOOID")
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Inspection inspection1 = new Inspection(1L, date, ServiceStatus.NIET_UITVOEREN, customer, "uitlaat vervangen", null, car);
         Inspection inspection2 = new Inspection(2L, date, ServiceStatus.UITVOEREN, customer, "remmen vervangen", null, car);
@@ -181,7 +181,7 @@ public class InspectionServiceTest {
     void updateInspectionByIdTest() {
         //Arrange => create updateInspection and storedInspection object as input for test
         Customer customer = new Customer(1L, "Karel", "Hoekstra", "+31612345678", "karel.hoekstra@mail.com");
-        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53");
+        Car car = new Car(1L, "volkswagen", "polo", "2021", "58-AAA-53", 1L);
         LocalDate date = LocalDate.of(2020, 6, 8);
         Inspection updateInspection = new Inspection(1L, date, ServiceStatus.VOLTOOID, customer, "uitlaat vervangen", null, car);
         Inspection storedInspection = new Inspection(1L, date, ServiceStatus.UITVOEREN, customer, "remmen vervangen", null, car);
