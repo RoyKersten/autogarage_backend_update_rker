@@ -3,7 +3,8 @@
 De volgende onderwerpen zullen in deze readme worden behandeld:
 - Introductie van de applicatie
 - Beschrijving van de casus
-- opgeleverde documentatie eindopdracht
+- De applicatie opstarten
+- Opgeleverde documentatie eindopdracht
 
 # Introductie
 
@@ -30,6 +31,14 @@ Wanneer de reparatie voltooid is, wordt de reparatie op voltooid gezet en kan de
 Wanneer de klant de auto komt ophalen zal een kassamedewerker de bon laten genereren door het systeem. De bon bevat de keuring + bedrag, de handelingen + bedrag en de onderdelen + bedrag. Bij alle bedragen moet het BTW tarief nog berekend worden voordat de bedragen op de bon getoond worden. Wanneer de klant betaald heeft, wordt de status op betaald gezet.
 
 Daarnaast is er een backoffice medewerker die onderdelen (naam, prijs, voorraad) kan toevoegen aan het systeem, voorraden kan aanpassen en handelingen (naam, prijs) kan toevoegen aan het systeem. Alle prijzen in het systeem zijn exclusief BTW. 
+
+# De applicatie opstarten
+Bij deze applicatie hoort een installatie handleiding welke stap voor stap uitlegd welke applicaties geinstalleerd moeten worden en welke handelingen verricht moeten worden om de applicatie op te starten.
+
+Daarnaast heeft deze backend applicatie een eigen ontwikkelde front-end applicatie welke geinstalleerd kan worden, ook hiervan is een uitgebreide installatie handleiding beschikbaar.
+De link naar de front-end applicatie op github: 
+https://github.com/RoyKersten/eindopdracht_frontend_rker
+
 
 # Opgeleverde documentatie eindopdracht:
 
