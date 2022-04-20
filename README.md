@@ -10,7 +10,7 @@ De volgende onderwerpen zullen in deze readme worden behandeld:
 
 Deze applicatie is ontwikkeld als eindopdracht voor de hbo opleiding Full-Stack Developer, leerlijn backend van Novi Hogeschool en onderdeel van de bachelor opleiding Software Development.
 
-Deze backend applicatie is geschreven in Java met Spring Boot framework, voor de geschereven test cases is gebruik gemaakt van Junit en Mockito.
+Deze backend applicatie is geschreven in Java met Spring Boot framework, voor de geschreven test cases is gebruik gemaakt van Junit en Mockito.
 Installatie handleidingen en andere documentatie zijn niet meegeleverd op github maar kunnen desgevraagd worden aangeleverd.
 
 # Beschrijving van de casus
