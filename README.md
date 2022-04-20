@@ -2,6 +2,9 @@
 
 Deze applicatie is ontwikkeld als eindopdracht voor de hbo opleiding Full-Stack Developer leerlijn backend van Novi Hogeschool en onderdeel van de bachelor opleiding Software Development.
 
+Deze backend applicatie is geschreven in Java met Spring Boot framework, voor de geschereven test cases is gebruik gemaakt van Junit en Mockito.
+Installatie handleidingen en andere documentatie zijn niet meegeleverd op github maar kunnen desgevraagd worden aangeleverd.
+
 # Beschrijving van de casus
 **De eindopdracht is ontwikkeld op basis van onderstaande casus:**
 
@@ -47,4 +50,4 @@ Daarnaast is er een backoffice medewerker die onderdelen (naam, prijs, voorraad)
         * PostgreSQL
         * Postman
     *	handleiding om de backend applicatie op de database aan te sluiten;
-    * instructies om de applicatie te gebruiken met rest endpoints en uitgeschreven JSON body's.
+    *   instructies om de applicatie te gebruiken met rest endpoints en uitgeschreven JSON body's.
