@@ -1,6 +1,13 @@
+# Welkom bij de backend web applicatie die ontwikkeld is voor autogarage kersten 
+
+De volgende onderwerpen zullen in deze readme worden behandeld:
+- Introductie van de applicatie
+- Beschrijving van de casus
+- opgeleverde documentatie eindopdracht
+
 # Introductie
 
-Deze applicatie is ontwikkeld als eindopdracht voor de hbo opleiding Full-Stack Developer leerlijn backend van Novi Hogeschool en onderdeel van de bachelor opleiding Software Development.
+Deze applicatie is ontwikkeld als eindopdracht voor de hbo opleiding Full-Stack Developer, leerlijn backend van Novi Hogeschool en onderdeel van de bachelor opleiding Software Development.
 
 Deze backend applicatie is geschreven in Java met Spring Boot framework, voor de geschereven test cases is gebruik gemaakt van Junit en Mockito.
 Installatie handleidingen en andere documentatie zijn niet meegeleverd op github maar kunnen desgevraagd worden aangeleverd.
